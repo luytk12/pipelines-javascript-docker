@@ -12,6 +12,6 @@ steps:
    displayName: Build an image
    inputs:
      containerRegistry: 'DockerHubKoen'
-     repository: $(imageName)
+     repository: 'pipelines-javascript-docker'
      command: 'buildAndPush'
-     Dockerfile: app/Dockerfile
+     Dockerfile: '**/Dockerfile'
