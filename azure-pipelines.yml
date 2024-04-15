@@ -12,6 +12,9 @@ steps:
    displayName: Build an image
    inputs:
      containerRegistry: 'DockerHubKoen'
-     repository: 'pipelines-javascript-docker'
+     repository: 'luytk12/pipelines-javascript-docker'
      command: 'buildAndPush'
-     Dockerfile: '**/Dockerfile'
+     Dockerfile: 'Dockerfile'
+     tags: |
+       $(Build.BuildId)
+       latest
