@@ -14,7 +14,7 @@ steps:
      containerRegistry: 'DockerHubKoen'
      repository: 'luytk12/pipelines-javascript-docker'
      command: 'buildAndPush'
-     Dockerfile: 'Dockerfile'
+     Dockerfile: '**/Dockerfile'
      tags: |
        $(Build.BuildId)
        latest
