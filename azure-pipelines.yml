@@ -4,17 +4,16 @@ trigger:
 pool:
   vmImage: 'ubuntu-latest' 
 
-variables:
-    imageName: 'pipelines-javascript-docker'
-
 steps:
  - task: Docker@2
    displayName: Build an image
    inputs:
      containerRegistry: 'DockerHubKoen'
-     repository: 'luytk12/pipelines-javascript-docker'
+     repository: 'pipelines-javascript-docker'
      command: 'buildAndPush'
      Dockerfile: '**/Dockerfile'
      tags: |
        $(Build.BuildId)
        latest
+
+
